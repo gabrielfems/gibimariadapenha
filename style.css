@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+  }
+  
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 1200px) {
+    section {
+      max-width: 1000px;
+    }
+  }
+
+  h1 {
+    size: 10;
+    width: 80%;
+    height: auto;
+    left: 2%;
+    top: 10vh; 
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10vw;
+    line-height: 1.0;
+    text-align: left;
+    color: #F26463;
+    margin: 0.5em 0.5em 0.5em 1.5em;
+  }
+  
+  p {
+    width: 80%;
+    height: auto;
+    margin: 1.25em ;
+    padding: 0;  
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6vw;
+    line-height: 1.2em;
+    text-align: left;
+    color: rgba(21, 21, 21, 0.5); 
+    margin: 1em 1em 1em 2.5em
+       
+  }
+  
+  picture {
+    
+    max-width: 50%;
+    height: auto;
+    background: url(MariaDaPenha-G.png);
+    position:static ;
+    margin: 0em 0em 0em 3em;
+
+  }
+  
+  body {
+    background: #FFD8F4;
+  }
+  
+
+    
