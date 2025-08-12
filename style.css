@@ -1,67 +1,73 @@
 @charset "UTF-8";
 
-* {
-    margin: 0;
-  }
-  
-  section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  @media (max-width: 1200px) {
-    section {
-      max-width: 1000px;
-    }
+:root {
+  --rosa-claro: #FFD8F4;
+  --branco: #F3F1F380;
+  --destaque: #F26463;
+}
+
+.mudar {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza todo o conteúdo horizontalmente */
+  width: 100%;
+  margin-top: 100px;
+}
+
+/* Este contêiner irá colocar o bloco de texto e a imagem lado a lado */
+.com-imagem {
+  display: flex;
+  flex-direction: row; /* Alinha o bloco de texto e a imagem horizontalmente */
+  align-items: center; /* Centraliza ambos verticalmente */
+  gap: 20px; /* Adiciona espaçamento entre o texto e a imagem */
+}
+
+/* Novo seletor: o bloco de texto.
+   Ajuste as propriedades como quiser, ele é o pai do h1 e do p */
+.bloco-texto {
+  display: flex;
+  flex-direction: column; /* Garante que h1 e p fiquem um abaixo do outro */
+  text-align: left; /* Alinha o texto do bloco à esquerda (ajuste conforme necessário) */
+  gap: 10px;
+}
+
+.p {
+  font-size: 40px;
+  max-width: 700px;
+  color: rgba(21, 21, 21, 0.5);
+  max-inline-size: 900px;
+}
+
+.img {
+  max-width: 100%;
+}
+
+/* Estilizando o h1 */
+.titulo {
+  font-size: 50px;
+  margin: 0; /* Remove a margem padrão para colar no parágrafo */
+  color: var(--destaque);
+}
+
+@media (max-width: 768px) {
+  .com-imagem {
+    flex-direction: column;
+    align-items: center; /* opcional: centraliza imagem e texto */
   }
 
-  h1 {
-    size: 10;
-    width: 80%;
-    height: auto;
-    left: 2%;
-    top: 10vh; 
-    font-style: normal;
-    font-weight: 700;
-    font-size: 10vw;
-    line-height: 1.0;
-    text-align: left;
-    color: #F26463;
-    margin: 0.5em 0.5em 0.5em 1.5em;
+  .p {
+    font-size: 24px; /* opcional: ajustar tamanho do texto em telas pequenas */
+    max-width: 90%; /* para texto não ficar muito largo */
+    margin: 10px;
   }
-  
-  p {
-    width: 80%;
-    height: auto;
-    margin: 1.25em ;
-    padding: 0;  
-    font-style: normal;
-    font-weight: 500;
-    font-size: 6vw;
-    line-height: 1.2em;
-    text-align: left;
-    color: rgba(21, 21, 21, 0.5); 
-    margin: 1em 1em 1em 2.5em
-       
-  }
-  
-  picture {
-    
-    max-width: 50%;
-    height: auto;
-    background: url(MariaDaPenha-G.png);
-    position:static ;
-    margin: 0em 0em 0em 3em;
 
+  .img {
+    max-width: 100%;
+    width: 300px; /* ou ajuste conforme preferir */
   }
-  
-  body {
-    background: #FFD8F4;
-  }
-  
+}
 
-    
+
+body {
+  background: var(--rosa-claro)
+}
