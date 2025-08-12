@@ -9,25 +9,24 @@
 .mudar {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza todo o conteúdo horizontalmente */
+  align-items: center;
   width: 100%;
   margin-top: 100px;
 }
 
-/* Este contêiner irá colocar o bloco de texto e a imagem lado a lado */
+
 .com-imagem {
   display: flex;
-  flex-direction: row; /* Alinha o bloco de texto e a imagem horizontalmente */
-  align-items: center; /* Centraliza ambos verticalmente */
-  gap: 20px; /* Adiciona espaçamento entre o texto e a imagem */
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
-/* Novo seletor: o bloco de texto.
-   Ajuste as propriedades como quiser, ele é o pai do h1 e do p */
+
 .bloco-texto {
   display: flex;
-  flex-direction: column; /* Garante que h1 e p fiquem um abaixo do outro */
-  text-align: left; /* Alinha o texto do bloco à esquerda (ajuste conforme necessário) */
+  flex-direction: column;
+  text-align: left;
   gap: 10px;
 }
 
@@ -42,28 +41,44 @@
   max-width: 100%;
 }
 
-/* Estilizando o h1 */
 .titulo {
   font-size: 50px;
-  margin: 0; /* Remove a margem padrão para colar no parágrafo */
+  margin: 0;
   color: var(--destaque);
 }
+
+button {
+  background-color: #F26463;
+  color: #EFEFEF;
+  border-radius: 100px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  size: 20px;
+  font-weight: 700;
+  border-color: #F26463;
+  padding: 0px, 40px, 0px, 40px;
+  fill: solid;
+  width: 255px;
+  height: 64px;
+  cursor: pointer;
+}
+
 
 @media (max-width: 768px) {
   .com-imagem {
     flex-direction: column;
-    align-items: center; /* opcional: centraliza imagem e texto */
+    align-items: center;
   }
 
   .p {
-    font-size: 24px; /* opcional: ajustar tamanho do texto em telas pequenas */
-    max-width: 90%; /* para texto não ficar muito largo */
+    font-size: 24px;
+    max-width: 90%;
     margin: 10px;
   }
 
   .img {
     max-width: 100%;
-    width: 300px; /* ou ajuste conforme preferir */
+    width: 300px;
   }
 }
 
